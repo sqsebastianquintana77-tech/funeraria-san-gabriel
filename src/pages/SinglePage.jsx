@@ -32,6 +32,7 @@ const PLANS = [
 export default function SinglePage() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState(null);
+  const [mapActive, setMapActive] = useState(false);
 
   // Prevent scroll when modal is open
   useEffect(() => {
@@ -378,16 +379,41 @@ export default function SinglePage() {
               </div>
             </div>
           </div>
-          <div className="lg:col-span-7 h-[350px] md:h-[500px] rounded-[3rem] overflow-hidden shadow-2xl border border-outline-variant/10">
-            <iframe 
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3326.9628523333345!2d-70.65733422343379!3d-33.502343600173056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662db2160f56565%3A0x9075722eb212f6e2!2sFuneraria%20S.%20Gabriel!5e0!3m2!1ses-419!2sve!4v1775829628212!5m2!1ses-419!2sve" 
-              width="100%" 
-              height="100%" 
-              style={{ border: 0 }} 
-              allowFullScreen="" 
-              loading="lazy" 
-              title="Mapa"
-            ></iframe>
+          <div className="lg:col-span-7 space-y-4">
+            <div className="relative h-[350px] md:h-[500px] rounded-[3rem] overflow-hidden shadow-2xl border border-outline-variant/10">
+              {/* Overlay para móvil: evita abrir Maps sin querer */}
+              {!mapActive && (
+                <div 
+                  onClick={() => setMapActive(true)}
+                  className="absolute inset-0 z-10 bg-slate-900/30 backdrop-blur-[2px] flex flex-col items-center justify-center cursor-pointer lg:hidden transition-all"
+                >
+                  <span className="material-symbols-outlined notranslate text-white text-5xl mb-3 animate-bounce-subtle">touch_app</span>
+                  <p className="text-white font-bold text-sm uppercase tracking-widest">Toca para ver el mapa</p>
+                  <p className="text-white/60 text-xs mt-1">Interactúa sin salir de la página</p>
+                </div>
+              )}
+              <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3326.9628523333345!2d-70.65733422343379!3d-33.502343600173056!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9662db2160f56565%3A0x9075722eb212f6e2!2sFuneraria%20S.%20Gabriel!5e0!3m2!1ses-419!2sve!4v1775829628212!5m2!1ses-419!2sve" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 0, pointerEvents: mapActive ? 'auto' : 'none' }} 
+                allowFullScreen="" 
+                loading="lazy" 
+                title="Mapa"
+                className="lg:pointer-events-auto"
+              ></iframe>
+            </div>
+            {/* Botón dedicado: abre Google Maps en nueva pestaña */}
+            <a 
+              href="https://maps.app.goo.gl/YourLink" 
+              target="_blank" 
+              rel="noreferrer"
+              onClick={(e) => { e.preventDefault(); window.open('https://www.google.com/maps/place/Funeraria+S.+Gabriel/@-33.5023436,-70.6573342,17z', '_blank'); }}
+              className="flex items-center justify-center gap-3 bg-primary text-white py-4 rounded-2xl font-bold uppercase tracking-widest text-[10px] hover:bg-slate-900 transition-colors shadow-lg lg:hidden"
+            >
+              <span className="material-symbols-outlined notranslate text-lg">open_in_new</span>
+              Abrir en Google Maps
+            </a>
           </div>
         </div>
       </section>
