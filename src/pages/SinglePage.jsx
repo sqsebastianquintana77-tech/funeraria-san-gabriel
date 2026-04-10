@@ -93,33 +93,33 @@ export default function SinglePage() {
       </nav>
 
       {/* Quick Access Bar */}
-      <section className="fixed top-[72px] md:top-[80px] w-full z-40 bg-white border-b border-primary/5 shadow-md hidden sm:block">
+      <section className="fixed top-[72px] md:top-[80px] w-full z-40 bg-white border-b border-primary/5 shadow-md shadow-black/5">
         <div className="max-w-7xl mx-auto grid grid-cols-5 divide-x divide-primary/5">
-          <a href="tel:+56931798537" className="flex flex-col items-center py-4 hover:bg-red-50 transition-colors group">
-            <span className="material-symbols-outlined text-red-600 mb-1 group-hover:scale-110 transition-transform">emergency</span>
-            <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-red-700">Necesito ayuda ahora</span>
+          <a href="tel:+56931798537" className="flex flex-col items-center py-2 md:py-4 hover:bg-red-50 transition-colors group">
+            <span className="material-symbols-outlined text-red-600 mb-0.5 text-xl md:text-2xl group-hover:scale-110 transition-transform">emergency</span>
+            <span className="text-[7px] md:text-xs font-bold uppercase tracking-widest text-red-700 text-center px-1">Ayuda Ahora</span>
           </a>
-          <button onClick={() => scrollToSection('planes')} className="flex flex-col items-center py-4 hover:bg-slate-50 transition-colors group">
-            <span className="material-symbols-outlined text-primary mb-1 group-hover:scale-110 transition-transform">church</span>
-            <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-slate-800">Funeraria</span>
+          <button onClick={() => scrollToSection('planes')} className="flex flex-col items-center py-2 md:py-4 hover:bg-slate-50 transition-colors group">
+            <span className="material-symbols-outlined text-primary mb-0.5 text-xl md:text-2xl group-hover:scale-110 transition-transform">church</span>
+            <span className="text-[7px] md:text-xs font-bold uppercase tracking-widest text-slate-800">Funeraria</span>
           </button>
-          <button onClick={() => scrollToSection('planes')} className="flex flex-col items-center py-4 hover:bg-slate-50 transition-colors group">
-            <span className="material-symbols-outlined text-primary mb-1 group-hover:scale-110 transition-transform">meeting_room</span>
-            <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-slate-800">Velatorio</span>
+          <button onClick={() => scrollToSection('planes')} className="flex flex-col items-center py-2 md:py-4 hover:bg-slate-50 transition-colors group">
+            <span className="material-symbols-outlined text-primary mb-0.5 text-xl md:text-2xl group-hover:scale-110 transition-transform">meeting_room</span>
+            <span className="text-[7px] md:text-xs font-bold uppercase tracking-widest text-slate-800">Velatorio</span>
           </button>
-          <button onClick={() => scrollToSection('planes')} className="flex flex-col items-center py-4 hover:bg-slate-50 transition-colors group">
-            <span className="material-symbols-outlined text-primary mb-1 group-hover:scale-110 transition-transform">local_fire_department</span>
-            <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-slate-800">Cremación</span>
+          <button onClick={() => scrollToSection('planes')} className="flex flex-col items-center py-2 md:py-4 hover:bg-slate-50 transition-colors group">
+            <span className="material-symbols-outlined text-primary mb-0.5 text-xl md:text-2xl group-hover:scale-110 transition-transform">local_fire_department</span>
+            <span className="text-[7px] md:text-xs font-bold uppercase tracking-widest text-slate-800">Cremación</span>
           </button>
-          <button onClick={() => scrollToSection('ubicacion')} className="flex flex-col items-center py-4 hover:bg-slate-50 transition-colors group">
-            <span className="material-symbols-outlined text-primary mb-1 group-hover:scale-110 transition-transform">grass</span>
-            <span className="text-[10px] md:text-xs font-bold uppercase tracking-widest text-slate-800">Sepultura</span>
+          <button onClick={() => scrollToSection('ubicacion')} className="flex flex-col items-center py-2 md:py-4 hover:bg-slate-50 transition-colors group">
+            <span className="material-symbols-outlined text-primary mb-0.5 text-xl md:text-2xl group-hover:scale-110 transition-transform">grass</span>
+            <span className="text-[7px] md:text-xs font-bold uppercase tracking-widest text-slate-800">Sepultura</span>
           </button>
         </div>
       </section>
 
       {/* Hero Section */}
-      <section id="hero" className="relative min-h-[90vh] flex items-center pt-20 overflow-hidden">
+      <section id="hero" className="relative min-h-[90vh] flex items-center pt-[140px] md:pt-[160px] overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             className="w-full h-full object-cover" 
