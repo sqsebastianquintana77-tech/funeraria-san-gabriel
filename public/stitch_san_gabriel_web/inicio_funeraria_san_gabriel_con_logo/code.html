@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+
+<html class="light" lang="es"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Inter:wght@400;500;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "secondary-fixed": "#ffe16d",
+                    "outline": "#6d797a",
+                    "inverse-primary": "#5fd8e0",
+                    "error": "#ba1a1a",
+                    "tertiary": "#5f5e5e",
+                    "surface-container-low": "#f3f4f5",
+                    "primary-fixed": "#7ef4fc",
+                    "secondary": "#705d00",
+                    "on-primary": "#ffffff",
+                    "on-secondary-fixed": "#221b00",
+                    "surface-tint": "#00696e",
+                    "inverse-on-surface": "#f0f1f2",
+                    "on-secondary-fixed-variant": "#544600",
+                    "primary": "#00696e",
+                    "on-background": "#191c1d",
+                    "tertiary-container": "#929191",
+                    "surface-bright": "#f8f9fa",
+                    "surface-container-high": "#e7e8e9",
+                    "on-error-container": "#93000a",
+                    "surface-container-highest": "#e1e3e4",
+                    "surface": "#f8f9fa",
+                    "error-container": "#ffdad6",
+                    "tertiary-fixed": "#e4e2e1",
+                    "on-tertiary-container": "#2a2a2a",
+                    "background": "#f8f9fa",
+                    "on-surface": "#191c1d",
+                    "outline-variant": "#bcc9ca",
+                    "on-tertiary": "#ffffff",
+                    "on-primary-container": "#003033",
+                    "on-primary-fixed-variant": "#004f53",
+                    "surface-container": "#edeeef",
+                    "tertiary-fixed-dim": "#c8c6c6",
+                    "surface-dim": "#d9dadb",
+                    "on-primary-fixed": "#002022",
+                    "secondary-fixed-dim": "#e9c400",
+                    "surface-variant": "#e1e3e4",
+                    "primary-fixed-dim": "#5fd8e0",
+                    "on-secondary-container": "#6e5c00",
+                    "primary-container": "#00a1a9",
+                    "on-secondary": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-error": "#ffffff",
+                    "on-surface-variant": "#3d494a",
+                    "secondary-container": "#fcd400",
+                    "on-tertiary-fixed": "#1b1c1c",
+                    "inverse-surface": "#2e3132",
+                    "on-tertiary-fixed-variant": "#474747"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "fontFamily": {
+                    "headline": ["Noto Serif"],
+                    "body": ["Inter"],
+                    "label": ["Inter"]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, .font-serif { font-family: 'Noto Serif', serif; }
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+        }
+        .hero-gradient {
+            background: linear-gradient(to right, rgba(248, 249, 250, 0.95) 30%, rgba(248, 249, 250, 0) 100%);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-primary-container selection:text-on-primary-container">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-slate-50/80 dark:bg-slate-950/80 backdrop-blur-xl">
+<div class="flex justify-between items-center px-12 py-4 max-w-screen-2xl mx-auto">
+<a href="#"><img alt="San Gabriel Logo" class="h-12 w-auto object-contain" src="https://lh3.googleusercontent.com/aida/ADBb0uh0eVjge9YPXSncxQEnyYrRgYMXoLRpHbyOdtd335A1HuGAXTwnTAZXq5htSmVxWLUnfTqOuD2dvmW6d7nEc6D0uKtO_kzDN7OY7NckIdjfuae8xBCfxSWawT2bmWtKrRMennlx_lor5Xq5kQusJAgQiqrxmqGMMy7kUvdYshyfUa7q2wpJXpfwgbMW9fMxJ0gSOjRBCKxEsQy5OXSgwAg3F-MGxxu4uXncceDEmQOAI1a2wsSG1DPvN32JeO66ovcGTVVHQzwEVHs"/></a>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-teal-700 dark:text-teal-300 font-bold border-teal-600 transition-colors duration-300" href="#">Home</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-teal-600 transition-colors duration-300" href="#">Services</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-teal-600 transition-colors duration-300" href="#">Obituaries</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-teal-600 transition-colors duration-300" href="#">About Us</a>
+<a class="text-slate-600 dark:text-slate-400 font-medium hover:text-teal-600 transition-colors duration-300" href="#">Contact</a>
+</div>
+<button class="bg-gradient-to-r from-primary to-primary-container text-on-primary px-6 py-2.5 rounded-full text-xs font-medium tracking-widest uppercase hover:opacity-90 transition-opacity">
+                Emergency Call
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-screen flex items-center pt-20 overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="Serene landscape of a quiet lake at dawn with mist rising from the water and soft blue and white morning light" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA4IkBBys2Ix-ws1zvUXfK_FYw_7IXgMepz1xPLRn9YKl3AqV59ZpPWt5SNQfA6dUddW6bp0XGRujZHeyvTZlwKughAcZ_t5XRMIRCoIGACPojYikm8ZD7_cfKAJI3GBT_2UHtCUeVPNPhQWhi5Sp3ffsOp8Q5HUfm7vSS0wKWgQ2UrQPdPxQLpgTutjLA9XHl9yEsQGVhS1qrCvg_EE2OZb-7HCgOCnHw4RNew2VjUjVIoI-Yt3HBJxR9g6rAAb_9zfnh0QmZHCgYH"/>
+<div class="absolute inset-0 hero-gradient"></div>
+</div>
+<div class="relative z-10 max-w-7xl mx-auto px-12 grid grid-cols-1 lg:grid-cols-2 gap-12">
+<div class="space-y-8">
+<h1 class="text-5xl md:text-6xl text-primary font-serif leading-tight">
+                    Funeraria San Gabriel: <br/>
+<span class="italic">Acompañamiento con Dignidad y Respeto</span>
+</h1>
+<p class="text-xl text-tertiary font-body max-w-md leading-relaxed">
+                    Estamos a su disposición las 24 horas del día en Santiago de Chile, brindando consuelo y guía profesional en los momentos más difíciles.
+                </p>
+<!-- Quick Actions -->
+<div class="flex flex-col sm:flex-row gap-4 pt-4">
+<a class="inline-flex items-center justify-center px-8 py-4 bg-gradient-to-r from-primary to-primary-container text-on-primary rounded-full font-label text-xs font-bold tracking-widest uppercase shadow-lg shadow-primary/20 hover:scale-105 transition-transform" href="tel:+56931798537">
+                        Necesito ayuda ahora
+                    </a>
+<a class="inline-flex items-center justify-center px-8 py-4 bg-surface-container-lowest text-primary rounded-full font-label text-xs font-bold tracking-widest uppercase border border-outline-variant/20 hover:bg-surface-container transition-colors" href="#">
+                        Planificar con anticipación
+                    </a>
+</div>
+</div>
+</div>
+</section>
+<!-- Services Section -->
+<section class="py-32 bg-surface">
+<div class="max-w-7xl mx-auto px-12">
+<div class="text-center mb-20 space-y-4">
+<h2 class="text-4xl text-on-surface font-serif">Nuestros Servicios</h2>
+<div class="w-16 h-1 bg-primary-container mx-auto rounded-full"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="group p-8 rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-all duration-500 flex flex-col h-full">
+<div class="mb-6 text-primary">
+<span class="material-symbols-outlined text-4xl">church</span>
+</div>
+<h3 class="text-2xl font-serif text-on-surface mb-4 group-hover:text-primary transition-colors">Servicio Tradicional</h3>
+<p class="text-tertiary leading-relaxed mb-8 flex-grow">Ceremonias personalizadas que honran la vida y el legado de sus seres queridos con la máxima solemnidad.</p>
+<a class="text-primary font-bold text-sm flex items-center gap-2 hover:gap-4 transition-all" href="#">
+                        Saber más <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Card 2 -->
+<div class="group p-8 rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-all duration-500 flex flex-col h-full">
+<div class="mb-6 text-primary">
+<span class="material-symbols-outlined text-4xl">local_fire_department</span>
+</div>
+<h3 class="text-2xl font-serif text-on-surface mb-4 group-hover:text-primary transition-colors">Cremación</h3>
+<p class="text-tertiary leading-relaxed mb-8 flex-grow">Un proceso respetuoso y privado, con diversas opciones de ánforas y memoriales modernos.</p>
+<a class="text-primary font-bold text-sm flex items-center gap-2 hover:gap-4 transition-all" href="#">
+                        Saber más <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+<!-- Card 3 -->
+<div class="group p-8 rounded-xl bg-surface-container-low hover:bg-surface-container-high transition-all duration-500 flex flex-col h-full">
+<div class="mb-6 text-primary">
+<span class="material-symbols-outlined text-4xl">public</span>
+</div>
+<h3 class="text-2xl font-serif text-on-surface mb-4 group-hover:text-primary transition-colors">Traslados Internacionales</h3>
+<p class="text-tertiary leading-relaxed mb-8 flex-grow">Gestión completa de trámites y logística para traslados hacia y desde cualquier lugar del mundo.</p>
+<a class="text-primary font-bold text-sm flex items-center gap-2 hover:gap-4 transition-all" href="#">
+                        Saber más <span class="material-symbols-outlined text-sm">arrow_forward</span>
+</a>
+</div>
+</div>
+</div>
+</section>
+<!-- About Us Section -->
+<section class="py-24 bg-surface-container-low overflow-hidden">
+<div class="max-w-7xl mx-auto px-12 grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="relative">
+<img class="rounded-xl shadow-2xl z-10 relative" data-alt="Interior of a modern and peaceful reception area with soft lighting, minimalist wooden furniture and white walls" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDMMjQXGFRR1EQOsbIQ5ViYDPiBtgYcq2rkHwuWYuYdpYDGSwLdlDG0uTXkfkM3agZcyn_D5P8PQDJ03VRv8neLuJ2IUj7Fmk6LihFFz9ndgTdDI1PmzqmM6Ndp2oF5sCM2w4Bj-c1KDRNFTm5GkBbE2-vHSgt6krLy0N8bY7q3sfzrH2bxJDEGHX4kNaAKFMao6Vna_GIgwBM56ft5mIrFAhMg_jo1MznkTH94hS2NJvICNDsfotFmzJ2rb3PdfmzosCtOhh4XQc0t"/>
+<div class="absolute -bottom-8 -right-8 w-64 h-64 bg-primary-container/10 rounded-full blur-3xl"></div>
+</div>
+<div class="space-y-6">
+<span class="text-secondary font-bold tracking-widest uppercase text-xs">Nuestra Trayectoria</span>
+<h2 class="text-4xl text-on-surface font-serif leading-tight">Compromiso con las familias de Santiago</h2>
+<p class="text-lg text-tertiary leading-relaxed font-body italic">
+                    "En Funeraria San Gabriel, entendemos que cada vida es única. Nuestro propósito es brindar un espacio de paz y una gestión impecable, permitiendo que las familias se enfoquen en lo más importante: la despedida y el recuerdo."
+                </p>
+<p class="text-tertiary leading-relaxed">
+                    Ubicados en el corazón de Santiago, nos hemos consolidado como un referente de confianza, ética y profesionalismo en servicios funerarios integrales.
+                </p>
+</div>
+</div>
+</section>
+<!-- Location Section -->
+<section class="py-32 bg-surface">
+<div class="max-w-7xl mx-auto px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+<div class="lg:col-span-5 space-y-8">
+<h2 class="text-4xl text-on-surface font-serif">Encuéntrenos</h2>
+<div class="space-y-6">
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">location_on</span>
+<div>
+<p class="font-bold text-on-surface">Dirección</p>
+<p class="text-tertiary">Santiago Centro, Chile</p>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">mail</span>
+<div>
+<p class="font-bold text-on-surface">Correo Electrónico</p>
+<a class="text-tertiary hover:text-primary transition-colors" href="mailto:fsangabriel@gmail.com">fsangabriel@gmail.com</a>
+</div>
+</div>
+<div class="flex items-start gap-4">
+<span class="material-symbols-outlined text-primary">schedule</span>
+<div>
+<p class="font-bold text-on-surface">Horario de Atención</p>
+<p class="text-tertiary">Disponibles las 24 horas, los 365 días del año</p>
+</div>
+</div>
+</div>
+</div>
+<div class="lg:col-span-7 h-[450px] rounded-xl overflow-hidden shadow-xl">
+<img class="w-full h-full object-cover" data-alt="Stylized map view of Santiago Chile with a soft monochromatic teal color palette" data-location="Santiago, Chile" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDuefxBtJtVJSofRbo_V8rHPqIK_ICPyAuwleTEB_WTZLJbibOFMPRjPWucuQDaiLrrSkB-PmuLBRQRFT8CcYG1Q3ZHTx3CpyWyv6U0xBUZcpFOZvjzT9gccVcoLI5PQUxlhHNVk_DQqiUBZj2bXddTV_zAoG7j-AVORNn1mjqYQZff8Qj1otDMuSbd7r0ko2wnk-Jx-kqW2uIy1r6B-2RZZmiKupq6-lSkXUEjHz50zXPEgxpTdhWBFrIPXoaQvhHUAu6LChjO6me"/>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="w-full py-16 px-12 bg-slate-100 dark:bg-slate-900">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 max-w-7xl mx-auto">
+<div class="space-y-4">
+<img alt="San Gabriel Logo" class="h-16 w-auto object-contain mb-4" src="https://lh3.googleusercontent.com/aida/ADBb0uh0eVjge9YPXSncxQEnyYrRgYMXoLRpHbyOdtd335A1HuGAXTwnTAZXq5htSmVxWLUnfTqOuD2dvmW6d7nEc6D0uKtO_kzDN7OY7NckIdjfuae8xBCfxSWawT2bmWtKrRMennlx_lor5Xq5kQusJAgQiqrxmqGMMy7kUvdYshyfUa7q2wpJXpfwgbMW9fMxJ0gSOjRBCKxEsQy5OXSgwAg3F-MGxxu4uXncceDEmQOAI1a2wsSG1DPvN32JeO66ovcGTVVHQzwEVHs"/>
+<p class="text-slate-500 dark:text-slate-400 text-sm italic">Servicios con alma y respeto.</p>
+</div>
+<div>
+<h4 class="text-teal-900 dark:text-teal-500 font-serif mb-4">Contacto</h4>
+<ul class="space-y-2 text-slate-500 dark:text-slate-400 text-sm">
+<li>Email: fsangabriel@gmail.com</li>
+<li>Location: Santiago, Chile</li>
+</ul>
+</div>
+<div>
+<h4 class="text-teal-900 dark:text-teal-500 font-serif mb-4">Legal</h4>
+<ul class="space-y-2 text-slate-500 dark:text-slate-400 text-sm">
+<li><a class="hover:text-teal-600 transition-colors" href="#">Privacy Policy</a></li>
+<li><a class="hover:text-teal-600 transition-colors" href="#">Terms of Service</a></li>
+</ul>
+</div>
+<div class="flex flex-col justify-between">
+<p class="text-slate-500 dark:text-slate-400 text-xs">
+                    © 2024 Funeraria San Gabriel. Santiago, Chile.
+                </p>
+</div>
+</div>
+</footer>
+<!-- WhatsApp Floating Button -->
+<a class="fixed bottom-8 right-8 z-50 flex items-center justify-center bg-white/80 dark:bg-slate-900/80 backdrop-blur-md p-4 rounded-full shadow-xl shadow-teal-900/5 hover:scale-105 transition-transform group" href="https://wa.me/56931798537" target="_blank">
+<span class="material-symbols-outlined text-yellow-700 dark:text-yellow-500 text-3xl">chat</span>
+<span class="max-w-0 overflow-hidden whitespace-nowrap group-hover:max-w-xs group-hover:ml-3 transition-all duration-500 text-yellow-800 font-label text-sm font-medium">WhatsApp Support</span>
+</a>
+</body></html>
