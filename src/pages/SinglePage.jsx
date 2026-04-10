@@ -362,9 +362,7 @@ export default function SinglePage() {
                 <div>
                   <p className="font-bold text-on-surface uppercase tracking-widest text-[10px]">Urgencias y Consultas</p>
                   <div className="grid gap-1 mt-1">
-                      <a href="tel:+56975423704" className="text-primary hover:underline text-sm font-medium">+56 9 7542 3704</a>
                       <a href="tel:+56931798537" className="text-primary hover:underline text-sm font-medium">+56 9 3179 8537</a>
-                      <a href="tel:+56997451997" className="text-primary hover:underline text-sm font-medium">+56 9 9745 1997</a>
                   </div>
                 </div>
               </div>
