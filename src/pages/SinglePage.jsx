@@ -73,7 +73,7 @@ export default function SinglePage() {
               Ayuda 24/7
             </a>
             <button onClick={() => setIsMenuOpen(!isMenuOpen)} className="md:hidden text-white">
-              <span className="material-symbols-outlined text-3xl">{isMenuOpen ? 'close' : 'menu'}</span>
+              <span className="material-symbols-outlined notranslate text-3xl">{isMenuOpen ? 'close' : 'menu'}</span>
             </button>
           </div>
         </div>
@@ -96,23 +96,23 @@ export default function SinglePage() {
       <section className="fixed top-[72px] md:top-[80px] w-full z-40 bg-white border-b border-primary/5 shadow-md shadow-black/5">
         <div className="max-w-7xl mx-auto grid grid-cols-5 divide-x divide-primary/5">
           <a href="tel:+56931798537" className="flex flex-col items-center py-2 md:py-4 hover:bg-red-50 transition-colors group">
-            <span className="material-symbols-outlined text-red-600 mb-0.5 text-xl md:text-2xl group-hover:scale-110 transition-transform">emergency</span>
+            <span className="material-symbols-outlined notranslate text-red-600 mb-0.5 text-xl md:text-2xl group-hover:scale-110 transition-transform">emergency</span>
             <span className="text-[7px] md:text-xs font-bold uppercase tracking-widest text-red-700 text-center px-1">Ayuda Ahora</span>
           </a>
           <button onClick={() => scrollToSection('planes')} className="flex flex-col items-center py-2 md:py-4 hover:bg-slate-50 transition-colors group">
-            <span className="material-symbols-outlined text-primary mb-0.5 text-xl md:text-2xl group-hover:scale-110 transition-transform">church</span>
+            <span className="material-symbols-outlined notranslate text-primary mb-0.5 text-xl md:text-2xl group-hover:scale-110 transition-transform">church</span>
             <span className="text-[7px] md:text-xs font-bold uppercase tracking-widest text-slate-800">Funeraria</span>
           </button>
           <button onClick={() => scrollToSection('planes')} className="flex flex-col items-center py-2 md:py-4 hover:bg-slate-50 transition-colors group">
-            <span className="material-symbols-outlined text-primary mb-0.5 text-xl md:text-2xl group-hover:scale-110 transition-transform">meeting_room</span>
+            <span className="material-symbols-outlined notranslate text-primary mb-0.5 text-xl md:text-2xl group-hover:scale-110 transition-transform">meeting_room</span>
             <span className="text-[7px] md:text-xs font-bold uppercase tracking-widest text-slate-800">Velatorio</span>
           </button>
           <button onClick={() => scrollToSection('planes')} className="flex flex-col items-center py-2 md:py-4 hover:bg-slate-50 transition-colors group">
-            <span className="material-symbols-outlined text-primary mb-0.5 text-xl md:text-2xl group-hover:scale-110 transition-transform">local_fire_department</span>
+            <span className="material-symbols-outlined notranslate text-primary mb-0.5 text-xl md:text-2xl group-hover:scale-110 transition-transform">local_fire_department</span>
             <span className="text-[7px] md:text-xs font-bold uppercase tracking-widest text-slate-800">Cremación</span>
           </button>
           <button onClick={() => scrollToSection('ubicacion')} className="flex flex-col items-center py-2 md:py-4 hover:bg-slate-50 transition-colors group">
-            <span className="material-symbols-outlined text-primary mb-0.5 text-xl md:text-2xl group-hover:scale-110 transition-transform">grass</span>
+            <span className="material-symbols-outlined notranslate text-primary mb-0.5 text-xl md:text-2xl group-hover:scale-110 transition-transform">grass</span>
             <span className="text-[7px] md:text-xs font-bold uppercase tracking-widest text-slate-800">Sepultura</span>
           </button>
         </div>
@@ -183,7 +183,7 @@ export default function SinglePage() {
                   <ul className="space-y-3 mb-8 flex-grow text-sm text-on-surface-variant font-medium">
                     {plan.features.slice(0, 4).map((f, i) => (
                       <li key={i} className="flex items-start gap-3">
-                        <span className="material-symbols-outlined text-primary/60 text-lg">
+                        <span className="material-symbols-outlined notranslate text-primary/60 text-lg">
                           arrow_forward
                         </span>
                         {f}
@@ -212,7 +212,7 @@ export default function SinglePage() {
               onClick={() => setSelectedPlan(null)}
               className="absolute top-6 right-6 z-[110] bg-white p-3 rounded-full shadow-2xl text-slate-900 hover:bg-red-50 hover:text-red-500 transition-all flex items-center justify-center border border-slate-100"
             >
-              <span className="material-symbols-outlined text-2xl">close</span>
+              <span className="material-symbols-outlined notranslate text-2xl">close</span>
             </button>
 
             <div className="grid grid-cols-1 lg:grid-cols-12 h-full">
@@ -242,7 +242,7 @@ export default function SinglePage() {
                   <ul className="grid grid-cols-1 md:grid-cols-2 gap-y-4 gap-x-8">
                     {selectedPlan.features.map((f, i) => (
                       <li key={i} className="flex items-start gap-4 text-on-surface-variant group/item">
-                        <span className="material-symbols-outlined text-primary/70 text-xl flex-shrink-0 group-hover/item:scale-110 transition-transform">verified_user</span>
+                        <span className="material-symbols-outlined notranslate text-primary/70 text-xl flex-shrink-0 group-hover/item:scale-110 transition-transform">verified_user</span>
                         <span className="text-sm font-medium text-slate-700">{f}</span>
                       </li>
                     ))}
@@ -261,11 +261,11 @@ export default function SinglePage() {
                   </a>
                   <div className="flex justify-center gap-8 pt-2">
                     <div className="flex items-center gap-2 text-[10px] text-slate-400 uppercase font-bold tracking-widest">
-                        <span className="material-symbols-outlined text-sm">support_agent</span>
+                        <span className="material-symbols-outlined notranslate text-sm">support_agent</span>
                         Asistencia 24h
                     </div>
                     <div className="flex items-center gap-2 text-[10px] text-slate-400 uppercase font-bold tracking-widest">
-                        <span className="material-symbols-outlined text-sm">workspace_premium</span>
+                        <span className="material-symbols-outlined notranslate text-sm">workspace_premium</span>
                         Calidad SPA
                     </div>
                   </div>
@@ -314,13 +314,13 @@ export default function SinglePage() {
             </div>
             
             <div className="bg-primary p-10 rounded-3xl flex flex-col justify-center text-white shadow-xl">
-              <span className="material-symbols-outlined text-4xl mb-4">workspace_premium</span>
+              <span className="material-symbols-outlined notranslate text-4xl mb-4">workspace_premium</span>
               <h3 className="font-serif text-xl mb-3">Calidad Certificada</h3>
               <p className="text-white/80 text-sm">Superamos estándares internacionales en cuidado funerario.</p>
             </div>
             
             <div className="bg-white p-10 rounded-3xl flex flex-col justify-center border border-outline-variant/10 shadow-sm">
-              <span className="material-symbols-outlined text-secondary text-3xl mb-4">event_available</span>
+              <span className="material-symbols-outlined notranslate text-secondary text-3xl mb-4">event_available</span>
               <h4 className="font-serif text-lg mb-2">Planificación Anticipada</h4>
               <p className="text-tertiary text-sm">Congele precios y evite decisiones difíciles a futuro.</p>
             </div>
@@ -347,7 +347,7 @@ export default function SinglePage() {
             <div className="space-y-8">
               <div className="flex items-start gap-4">
                 <div className="bg-primary/5 p-3 rounded-xl">
-                    <span className="material-symbols-outlined text-primary">location_on</span>
+                    <span className="material-symbols-outlined notranslate text-primary">location_on</span>
                 </div>
                 <div>
                   <p className="font-bold text-on-surface uppercase tracking-widest text-[10px]">Dirección Central</p>
@@ -356,7 +356,7 @@ export default function SinglePage() {
               </div>
               <div className="flex items-start gap-4">
                 <div className="bg-primary/5 p-3 rounded-xl">
-                    <span className="material-symbols-outlined text-primary">phone_iphone</span>
+                    <span className="material-symbols-outlined notranslate text-primary">phone_iphone</span>
                 </div>
                 <div>
                   <p className="font-bold text-on-surface uppercase tracking-widest text-[10px]">Urgencias y Consultas</p>
@@ -369,7 +369,7 @@ export default function SinglePage() {
               </div>
               <div className="flex items-start gap-4">
                 <div className="bg-primary/5 p-3 rounded-xl">
-                    <span className="material-symbols-outlined text-primary">mail</span>
+                    <span className="material-symbols-outlined notranslate text-primary">mail</span>
                 </div>
                 <div>
                   <p className="font-bold text-on-surface uppercase tracking-widest text-[10px]">Email Corporativo</p>
