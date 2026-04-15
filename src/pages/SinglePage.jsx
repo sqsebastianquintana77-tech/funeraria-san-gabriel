@@ -218,9 +218,9 @@ export default function SinglePage() {
 
             <div className="grid grid-cols-1 lg:grid-cols-12 h-full">
               {/* Image highlight section */}
-              <div className="lg:col-span-5 h-[350px] lg:h-full bg-slate-50 relative overflow-hidden group">
-                <img src={selectedPlan.image} alt={selectedPlan.name} className="w-full h-full object-cover animate-fade-in" />
-                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent"></div>
+              <div className="lg:col-span-5 min-h-[400px] lg:min-h-[500px] bg-slate-100 relative overflow-hidden group flex items-center justify-center p-6">
+                <img src={selectedPlan.image} alt={selectedPlan.name} className="max-w-full max-h-[420px] object-contain animate-fade-in drop-shadow-xl" />
+                <div className="absolute inset-0 bg-gradient-to-t from-slate-900/40 to-transparent pointer-events-none"></div>
                 <div className="absolute bottom-8 left-8 text-white">
                     <span className="bg-primary/90 px-4 py-1 rounded-full text-[10px] uppercase font-bold tracking-widest mb-3 inline-block">Vista Detallada</span>
                     <h3 className="text-3xl font-serif">{selectedPlan.name}</h3>
@@ -438,8 +438,7 @@ export default function SinglePage() {
           <div className="w-full max-w-4xl h-px bg-slate-900"></div>
           
           <div className="flex flex-col md:flex-row justify-between items-center w-full gap-6 text-slate-600 text-[10px] tracking-widest uppercase font-bold">
-            <p>© 2024 San Gabriel. Todos los derechos reservados.</p>
-            <a href="https://www.funeraiasangabriel.com" target="_blank" className="hover:text-white transition-colors">www.funeraiasangabriel.com</a>
+            <p>© 2026 Funeraria San Gabriel. Todos los derechos reservados. | Desarrollado por CeroTraba.</p>
           </div>
         </div>
       </footer>
