@@ -120,3 +120,40 @@ h1, h2, h3, .font-serif {
 .animate-scale-up {
   animation: scale-up 0.4s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 }
+
+/* ---- Crédito CeroTraba (footer) ---- */
+.cero-logo-wrap {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  overflow: hidden;
+  border-radius: 4px;
+}
+
+/* Glow suave que respira */
+@keyframes cero-glow {
+  0%, 100% { opacity: 0.85; filter: drop-shadow(0 0 0px rgba(125, 211, 252, 0)); }
+  50% { opacity: 1; filter: drop-shadow(0 0 6px rgba(125, 211, 252, 0.45)); }
+}
+
+.cero-logo-glow {
+  animation: cero-glow 4s ease-in-out infinite;
+}
+
+/* Barrido de luz sutil cada 5s */
+@keyframes cero-shine {
+  0% { left: -60%; }
+  45%, 100% { left: 140%; }
+}
+
+.cero-shine {
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 45%;
+  height: 100%;
+  background: linear-gradient(105deg, transparent 0%, rgba(255, 255, 255, 0.35) 50%, transparent 100%);
+  transform: skewX(-18deg);
+  animation: cero-shine 5s ease-in-out infinite;
+  pointer-events: none;
+}

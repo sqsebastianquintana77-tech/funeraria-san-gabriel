@@ -112,7 +112,7 @@ export default function SinglePage() {
             <span className="material-symbols-outlined notranslate text-primary mb-0.5 text-xl md:text-2xl group-hover:scale-110 transition-transform">local_fire_department</span>
             <span className="text-[7px] md:text-xs font-bold uppercase tracking-widest text-slate-800">Cremación</span>
           </button>
-          <button onClick={() => scrollToSection('ubicacion')} className="flex flex-col items-center py-2 md:py-4 hover:bg-slate-50 transition-colors group">
+          <button onClick={() => scrollToSection('sepulturas')} className="flex flex-col items-center py-2 md:py-4 hover:bg-slate-50 transition-colors group">
             <span className="material-symbols-outlined notranslate text-primary mb-0.5 text-xl md:text-2xl group-hover:scale-110 transition-transform">grass</span>
             <span className="text-[7px] md:text-xs font-bold uppercase tracking-widest text-slate-800">Sepultura</span>
           </button>
@@ -324,6 +324,15 @@ export default function SinglePage() {
               <span className="material-symbols-outlined notranslate text-secondary text-3xl mb-4">event_available</span>
               <h4 className="font-serif text-lg mb-2">Planificación Anticipada</h4>
               <p className="text-tertiary text-sm">Congele precios y evite decisiones difíciles a futuro.</p>
+              <a 
+                href="https://sepulturasenoferta.cl/" 
+                target="_blank" 
+                rel="noreferrer"
+                className="mt-4 inline-flex items-center gap-2 text-primary text-[11px] font-bold uppercase tracking-widest hover:gap-3 transition-all group/link"
+              >
+                Ver sepulturas disponibles
+                <span className="material-symbols-outlined notranslate text-sm group-hover/link:translate-x-1 transition-transform">arrow_forward</span>
+              </a>
             </div>
             
             <div className="md:col-span-2 bg-teal-50 rounded-3xl p-10 flex items-center gap-8 border border-teal-100">
@@ -416,6 +425,35 @@ export default function SinglePage() {
         </div>
       </section>
 
+      {/* Sepulturas en Oferta — Grupo San Gabriel */}
+      <section id="sepulturas" className="py-16 md:py-20 px-6 md:px-12 bg-white">
+        <div className="max-w-7xl mx-auto">
+          <div className="relative overflow-hidden bg-slate-50 rounded-[2.5rem] border border-outline-variant/10 shadow-sm px-8 md:px-14 py-10 md:py-12 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8">
+            <div className="absolute -right-20 -top-20 w-64 h-64 bg-primary/5 rounded-full blur-3xl pointer-events-none"></div>
+            <div className="flex items-start gap-5 relative">
+              <div className="bg-primary/5 p-4 rounded-2xl flex-shrink-0">
+                <span className="material-symbols-outlined notranslate text-primary text-2xl">grass</span>
+              </div>
+              <div className="space-y-2">
+                <h3 className="font-serif text-xl md:text-2xl text-on-surface">¿Buscas una sepultura?</h3>
+                <p className="text-tertiary text-sm max-w-xl leading-relaxed">
+                  Contamos con sepulturas disponibles en <span className="font-semibold text-on-surface-variant">Parque El Recuerdo — Américo Vespucio</span>, con transferencia notarial inmediata, respaldo legal y precios de oportunidad.
+                </p>
+              </div>
+            </div>
+            <a 
+              href="https://sepulturasenoferta.cl/" 
+              target="_blank" 
+              rel="noreferrer"
+              className="group relative inline-flex items-center gap-3 bg-primary text-white px-8 py-4 rounded-full font-bold tracking-widest uppercase text-[10px] hover:bg-slate-900 transition-all shadow-lg shadow-primary/10 whitespace-nowrap"
+            >
+              Ver Sepulturas
+              <span className="material-symbols-outlined notranslate text-base group-hover:translate-x-1 transition-transform">arrow_forward</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
       {/* Footer */}
       <footer className="w-full pt-20 pb-10 bg-slate-950 text-white">
         <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-col items-center text-center gap-14">
@@ -433,12 +471,27 @@ export default function SinglePage() {
             <button onClick={() => scrollToSection('planes')} className="hover:text-primary transition-colors">Planes</button>
             <button onClick={() => scrollToSection('nosotros')} className="hover:text-primary transition-colors">Nosotros</button>
             <button onClick={() => scrollToSection('ubicacion')} className="hover:text-primary transition-colors">Contacto</button>
+            <a href="https://sepulturasenoferta.cl/" target="_blank" rel="noreferrer" className="hover:text-primary-fixed transition-colors flex items-center gap-1.5">
+              Sepulturas en Oferta
+              <span className="material-symbols-outlined notranslate text-[10px] opacity-60">open_in_new</span>
+            </a>
           </div>
 
           <div className="w-full max-w-4xl h-px bg-slate-900"></div>
           
-          <div className="flex flex-col md:flex-row justify-between items-center w-full gap-6 text-slate-600 text-[10px] tracking-widest uppercase font-bold">
-            <p>© 2026 Funeraria San Gabriel. Todos los derechos reservados. | Desarrollado por CeroTraba.</p>
+          <div className="flex flex-col md:flex-row justify-between items-center w-full gap-6 text-slate-600 text-[10px] tracking-widest uppercase font-bold pb-20 md:pb-0">
+            <p>© 2026 Funeraria San Gabriel. Todos los derechos reservados.</p>
+            <div className="flex items-center gap-3 md:mr-24">
+              <span className="text-slate-500">Sitio diseñado y desplegado por</span>
+              <span className="cero-logo-wrap">
+                <img
+                  alt="CeroTraba"
+                  className="h-5 md:h-6 w-auto object-contain mix-blend-screen cero-logo-glow"
+                  src="/cerotraba_logo.png"
+                />
+                <span className="cero-shine"></span>
+              </span>
+            </div>
           </div>
         </div>
       </footer>
