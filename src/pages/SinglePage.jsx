@@ -471,7 +471,7 @@ export default function SinglePage() {
             <button onClick={() => scrollToSection('planes')} className="hover:text-primary transition-colors">Planes</button>
             <button onClick={() => scrollToSection('nosotros')} className="hover:text-primary transition-colors">Nosotros</button>
             <button onClick={() => scrollToSection('ubicacion')} className="hover:text-primary transition-colors">Contacto</button>
-            <a href="https://sepulturasenoferta.cl/" target="_blank" rel="noreferrer" className="hover:text-primary-fixed transition-colors flex items-center gap-1.5">
+            <a href="https://sepulturasenoferta.cl/" target="_blank" rel="noreferrer" className="seo-highlight transition-colors flex items-center gap-1.5">
               Sepulturas en Oferta
               <span className="material-symbols-outlined notranslate text-[10px] opacity-60">open_in_new</span>
             </a>

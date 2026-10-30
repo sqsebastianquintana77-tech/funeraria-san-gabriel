@@ -157,3 +157,26 @@ h1, h2, h3, .font-serif {
   animation: cero-shine 5s ease-in-out infinite;
   pointer-events: none;
 }
+
+/* ---- Resaltado intermitente: Sepulturas en Oferta (footer) ---- */
+@keyframes seo-pulse {
+  0%, 68%, 100% {
+    color: #64748b;
+    text-shadow: none;
+  }
+  76%, 88% {
+    color: #7ef4fc;
+    text-shadow: 0 0 14px rgba(126, 244, 252, 0.55), 0 0 4px rgba(126, 244, 252, 0.3);
+  }
+}
+
+.seo-highlight {
+  animation: seo-pulse 4.5s ease-in-out infinite;
+}
+
+/* En hover: se queda fijo brillante */
+.seo-highlight:hover {
+  animation: none;
+  color: #7ef4fc;
+  text-shadow: 0 0 14px rgba(126, 244, 252, 0.55), 0 0 4px rgba(126, 244, 252, 0.3);
+}
